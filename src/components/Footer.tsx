@@ -25,7 +25,7 @@ export default function Footer() {
             </svg>
           </Link>
           <Link
-            href="https://github.com/"
+            href="https://github.com/lysenkotamara13-cell"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -41,7 +41,7 @@ export default function Footer() {
             </svg>
           </Link>
           <Link
-            href="mailto:tamara@example.com"
+            href="mailto:lysenkotamara13@gmail.com"
             aria-label="Email"
             className="text-zinc-400 transition-colors hover:text-zinc-600 dark:hover:text-zinc-300"
           >

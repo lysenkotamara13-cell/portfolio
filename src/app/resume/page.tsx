@@ -8,31 +8,47 @@ export const metadata: Metadata = {
 
 const education = [
   {
-    degree: "Bachelor of Science in Finance",
-    school: "University",
-    year: "2021",
+    degree: "MBA",
+    school: "Southern States University",
+    location: "Newport Beach, CA",
+  },
+  {
+    degree: "MS, Economics (International Business)",
+    school: "Kozminski University",
+    location: "Warsaw, Poland",
+  },
+  {
+    degree: "MS, History",
+    school: "National Taras Shevchenko University",
+    location: "Kyiv, Ukraine",
   },
 ];
 
 const certifications = [
-  "Anaplan Model Builder",
-  "SQL Advanced",
-  "Financial Modeling & Valuation",
+  "Google Generative AI",
+  "Microsoft AI Builder",
+  "Tableau Forecasting",
+  "Budgeting & Finance Leadership Coursework",
 ];
 
-const coreSkills = [
-  "Anaplan",
-  "SQL / Hive",
-  "Python",
-  "REST API Integration",
-  "SAP BusinessObjects",
-  "SmartView",
-  "Excel / Financial Modeling",
-  "Data Visualization",
-  "ETL / Data Pipelines",
+const technicalSkills = [
+  { category: "Financial Planning", items: "Adaptive, Anaplan, Hyperion/SmartView" },
+  { category: "Data & BI", items: "Tableau, Power BI, SQL, Snowflake, Excel (advanced), Google Sheets" },
+  { category: "ERP/CRM", items: "NetSuite, SAP, Oracle, QuickBooks, Zendesk, HubSpot" },
+  { category: "Modeling", items: "SaaS KPIs (ARR/MRR/Churn), Pricing, Cohorts, Scenario Planning, OpEx/CapEx, Headcount, Unit Economics" },
+  { category: "Workflow", items: "Smartsheet, KPI Reporting Automation, QBR/Board Packages" },
+];
+
+const coreCompetencies = [
   "Budgeting & Forecasting",
-  "Variance Analysis",
-  "P&L Reporting",
+  "Financial Modeling & Scenario Planning",
+  "SaaS & Hybrid HW/SW Economics",
+  "KPI Analytics (ARR/MRR/Churn, CAC/LTV)",
+  "Management & Board Reporting",
+  "Business Partnering (Eng/Prod/GTM)",
+  "Cash Runway / Capital Allocation",
+  "Operating Cadence & QBRs",
+  "Process Design & Automation",
 ];
 
 export default function ResumePage() {
@@ -45,7 +61,8 @@ export default function ResumePage() {
               Resume
             </h1>
             <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-              My professional experience, education, and skills.
+              10+ years building modern, data-driven finance functions in AI and
+              technology settings.
             </p>
           </div>
           <a
@@ -57,8 +74,20 @@ export default function ResumePage() {
           </a>
         </div>
 
-        {/* Experience */}
+        {/* Core Competencies */}
         <div className="mt-14">
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+            Core Competencies
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {coreCompetencies.map((skill) => (
+              <SkillBadge key={skill} name={skill} />
+            ))}
+          </div>
+        </div>
+
+        {/* Experience */}
+        <div className="mt-14 border-t border-zinc-200 pt-10 dark:border-zinc-800">
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
             Experience
           </h2>
@@ -67,14 +96,21 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Skills */}
+        {/* Technical Skills */}
         <div className="mt-14 border-t border-zinc-200 pt-10 dark:border-zinc-800">
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-            Skills
+            Systems &amp; Technical Skills
           </h2>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {coreSkills.map((skill) => (
-              <SkillBadge key={skill} name={skill} />
+          <div className="mt-6 space-y-4">
+            {technicalSkills.map((group) => (
+              <div key={group.category}>
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  {group.category}
+                </h3>
+                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  {group.items}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -91,7 +127,7 @@ export default function ResumePage() {
                   {edu.degree}
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  {edu.school} &middot; {edu.year}
+                  {edu.school} &middot; {edu.location}
                 </p>
               </div>
             ))}

@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tamara Golubov — Financial Analytics & Data Engineering",
+    default: "Tamara Golubov — Strategic FP&A & Finance Leadership",
     template: "%s | Tamara Golubov",
   },
   description:
-    "Portfolio of Tamara Golubov — Financial Analyst and Data Engineer specializing in automated reporting, forecasting models, and data pipeline development.",
+    "Portfolio of Tamara Golubov — Strategic FP&A leader with 10+ years building data-driven finance functions in AI and technology. Budgeting, forecasting, financial modeling, and board-level reporting.",
 };
 
 export default function RootLayout({

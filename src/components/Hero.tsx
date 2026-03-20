@@ -7,16 +7,17 @@ export default function Hero() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-            Financial Analytics &amp; Data Engineering
+            Strategic FP&amp;A &amp; Finance Leadership
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-50">
             Hi, I&apos;m Tamara Golubov
           </h1>
           <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            I build automated data pipelines, forecasting models, and financial
-            reporting systems. I combine deep finance domain expertise with
-            technical skills in SQL, API integration, and data engineering to
-            turn complex data into clear, actionable insights.
+            Strategic FP&amp;A leader with 10+ years building modern,
+            data-driven finance functions in AI and technology. I stand up
+            forecasting, budgeting, and KPI frameworks from scratch and
+            translate complex analysis into clear narratives for boards,
+            investors, and executives.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
