@@ -9,6 +9,7 @@ const skills = [
   "NetSuite",
   "Tableau",
   "Power BI",
+  "Python",
   "SQL",
   "Snowflake",
   "Excel (Advanced)",

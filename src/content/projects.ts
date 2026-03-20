@@ -48,7 +48,7 @@ export const projects: Project[] = [
       "Built centralized reporting models that pulled from multiple source systems with built-in QA checks. Established a recurring reconciliation process across departments and contributed to the design and enhancement of planning tools including NetSuite, Adaptive, Anaplan, and Tableau.",
     outcome:
       "Delivered consistent, accurate reporting packages used by finance leadership for decision making. Improved forecast alignment across departments and reduced close-cycle friction.",
-    tools: ["NetSuite", "Anaplan", "Adaptive", "Tableau", "Excel", "PowerPoint"],
+    tools: ["NetSuite", "Anaplan", "Adaptive", "Tableau", "Python", "Excel"],
     category: "Reporting",
     featured: true,
   },

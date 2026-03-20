@@ -33,7 +33,7 @@ const certifications = [
 
 const technicalSkills = [
   { category: "Financial Planning", items: "Adaptive, Anaplan, Hyperion/SmartView" },
-  { category: "Data & BI", items: "Tableau, Power BI, SQL, Snowflake, Excel (advanced), Google Sheets" },
+  { category: "Data & BI", items: "Tableau, Power BI, SQL, Python, Snowflake, Excel (advanced), Google Sheets" },
   { category: "ERP/CRM", items: "NetSuite, SAP, Oracle, QuickBooks, Zendesk, HubSpot" },
   { category: "Modeling", items: "SaaS KPIs (ARR/MRR/Churn), Pricing, Cohorts, Scenario Planning, OpEx/CapEx, Headcount, Unit Economics" },
   { category: "Workflow", items: "Smartsheet, KPI Reporting Automation, QBR/Board Packages" },
