@@ -34,7 +34,7 @@ export const projects: Project[] = [
     category: "Analytics",
     featured: true,
     githubUrl: "https://github.com/lysenkotamara13-cell/saas-metrics-dashboard",
-    demoUrl: "https://saas-metrics-dashboard.streamlit.app",
+    demoUrl: "https://huggingface.co/spaces/lysenkotamara13/saas-metrics-dashboard",
   },
   {
     slug: "budget-variance-analyzer",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     category: "FP&A",
     featured: true,
     githubUrl: "https://github.com/lysenkotamara13-cell/budget-variance-analyzer",
-    demoUrl: "https://budget-variance-analyzer.streamlit.app",
+    demoUrl: "https://huggingface.co/spaces/lysenkotamara13/budget-variance-analyzer",
   },
   {
     slug: "financial-forecasting-engine",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     category: "Analytics",
     featured: true,
     githubUrl: "https://github.com/lysenkotamara13-cell/financial-forecasting-engine",
-    demoUrl: "https://financial-forecasting-engine.streamlit.app",
+    demoUrl: "https://huggingface.co/spaces/lysenkotamara13/financial-forecasting-engine",
   },
   {
     slug: "consolidated-pl-headcount-reporting",
