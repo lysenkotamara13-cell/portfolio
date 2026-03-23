@@ -9,28 +9,76 @@ export interface Project {
   tools: string[];
   category: string;
   featured: boolean;
+  githubUrl?: string;
+  demoUrl?: string;
 }
 
 export const projects: Project[] = [
   {
-    slug: "fpa-from-scratch-ai-saas",
-    title: "Built FP&A from Scratch for AI SaaS Startup",
+    slug: "saas-metrics-dashboard",
+    title: "SaaS Metrics Dashboard",
     summary:
-      "Designed the entire FP&A function for an AI-powered SaaS platform — integrated models for budgeting, forecasting, KPI tracking, and board-level reporting.",
+      "Interactive dashboard tracking ARR/MRR, churn, CAC/LTV, cohort retention, and cash runway — built with Python and Streamlit using synthetic SaaS data.",
     description: [
-      "Stood up the full FP&A function at AVbuilder, an AI startup, with no prior finance infrastructure in place.",
-      "Created integrated financial models covering budgeting, monthly/quarterly forecasting, KPI dashboards, and weekly executive review packages.",
-      "Built board-level investor decks incorporating ARR, CAC, LTV, cohort analysis, and cash runway modeling to support fundraising and capital allocation decisions.",
+      "Built a fully interactive financial dashboard that visualizes key SaaS metrics including Monthly and Annual Recurring Revenue, customer churn rates, unit economics (CAC vs LTV), and cash runway projections.",
+      "Includes a cohort retention heatmap showing customer retention patterns by signup month, with scenario controls to model different growth and churn assumptions in real time.",
+      "Uses synthetic data that mirrors real SaaS business patterns, demonstrating the kind of KPI tracking and board-level reporting I built at AVbuilder.",
     ],
     problem:
-      "AVbuilder had no FP&A function, no standardized financial models, and no recurring reporting cadence. Leadership needed a scalable finance infrastructure to support fundraising, operational planning, and investor communications.",
+      "SaaS companies need real-time visibility into their key financial metrics — revenue growth, unit economics, retention, and cash position — to make informed decisions about capital allocation and growth strategy.",
     approach:
-      "Designed integrated models from the ground up: budgeting, forecasting, and KPI tracking frameworks tied to the SaaS business model. Built reusable analysis templates and established a centralized source-of-truth for financial data. Partnered directly with the CEO/CFO on investor Q&A preparation and earnings scripts.",
+      "Designed a dashboard architecture with synthetic data generation that mirrors real SaaS patterns. Built interactive Plotly visualizations for each metric category with scenario planning controls that let users adjust growth and churn assumptions to model outcomes.",
     outcome:
-      "Delivered a fully operational FP&A function enabling data-driven decision making. Reduced investor preparation time by 25%. Provided clear capital allocation and cash runway visibility that shaped funding strategy.",
-    tools: ["Financial Modeling", "SaaS KPIs", "Excel", "Scenario Planning", "Board Reporting"],
+      "A production-quality dashboard demonstrating end-to-end SaaS financial analytics — from data modeling through interactive visualization and scenario planning.",
+    tools: ["Python", "Streamlit", "Pandas", "Plotly", "NumPy"],
+    category: "Analytics",
+    featured: true,
+    githubUrl: "https://github.com/lysenkotamara13-cell/saas-metrics-dashboard",
+    demoUrl: "https://saas-metrics-dashboard.streamlit.app",
+  },
+  {
+    slug: "budget-variance-analyzer",
+    title: "Budget vs Actuals Variance Analyzer",
+    summary:
+      "Upload budget data and instantly generate variance analysis with materiality flags, department drill-down, waterfall charts, and exportable reports.",
+    description: [
+      "Built a variance analysis tool that takes budget and actuals data (via CSV upload or built-in sample) and automatically computes dollar and percentage variances for every line item.",
+      "Features configurable materiality thresholds that flag significant variances, department-level drill-down filtering, and a waterfall chart showing the bridge from budget to actuals.",
+      "Includes a downloadable CSV export of the full variance report with all computed fields.",
+    ],
+    problem:
+      "FP&A teams spend hours manually computing variances in Excel, formatting reports, and identifying material items. This process is repeated monthly and is prone to formula errors.",
+    approach:
+      "Built an automated pipeline that ingests structured budget data, computes all variance metrics, applies configurable materiality thresholds, and generates visual reports including grouped bar charts, variance percentage views, and a budget-to-actuals waterfall — all in seconds.",
+    outcome:
+      "Demonstrates the ability to automate core FP&A workflows — turning a multi-hour manual Excel process into an instant, interactive, and error-free analysis.",
+    tools: ["Python", "Streamlit", "Pandas", "Plotly"],
     category: "FP&A",
     featured: true,
+    githubUrl: "https://github.com/lysenkotamara13-cell/budget-variance-analyzer",
+    demoUrl: "https://budget-variance-analyzer.streamlit.app",
+  },
+  {
+    slug: "financial-forecasting-engine",
+    title: "Financial Forecasting Engine",
+    summary:
+      "Generate forecasts using multiple statistical methods with best/base/worst scenario overlays, confidence intervals, and exportable projections.",
+    description: [
+      "Built a forecasting tool that applies multiple statistical methods (exponential smoothing, linear trend, moving average) to historical financial data and projects future values with confidence intervals.",
+      "Includes scenario planning controls that overlay best-case and worst-case growth/decline assumptions on top of the base statistical forecast.",
+      "Features cumulative forecast comparison across scenarios and month-over-month growth rate analysis.",
+    ],
+    problem:
+      "Financial forecasting typically requires manual model building in Excel with limited ability to quickly compare methods or run scenario analysis. Teams need faster iteration on assumptions.",
+    approach:
+      "Implemented three statistical forecasting methods with automatic parameter optimization. Added a scenario planning layer that applies growth/decline adjustments, and built visualizations showing base forecast with 95% confidence intervals alongside best/worst case projections.",
+    outcome:
+      "A tool that demonstrates forecasting methodology, scenario planning, and statistical rigor — core competencies for any FP&A role requiring budget and revenue projection.",
+    tools: ["Python", "Streamlit", "Pandas", "Plotly", "statsmodels"],
+    category: "Analytics",
+    featured: true,
+    githubUrl: "https://github.com/lysenkotamara13-cell/financial-forecasting-engine",
+    demoUrl: "https://financial-forecasting-engine.streamlit.app",
   },
   {
     slug: "consolidated-pl-headcount-reporting",
@@ -50,7 +98,7 @@ export const projects: Project[] = [
       "Delivered consistent, accurate reporting packages used by finance leadership for decision making. Improved forecast alignment across departments and reduced close-cycle friction.",
     tools: ["NetSuite", "Anaplan", "Adaptive", "Tableau", "Python", "Excel"],
     category: "Reporting",
-    featured: true,
+    featured: false,
   },
   {
     slug: "scenario-models-pricing-arr",
@@ -70,7 +118,7 @@ export const projects: Project[] = [
       "Informed $50M incremental ARR guidance with scenario-backed analysis. Improved earnings preparation speed and accuracy. Reduced forecast error through tighter accrual and month-end close processes.",
     tools: ["Tableau", "Excel", "Financial Modeling", "Scenario Planning"],
     category: "Analytics",
-    featured: true,
+    featured: false,
   },
   {
     slug: "board-reporting-resource-allocation",
@@ -90,7 +138,7 @@ export const projects: Project[] = [
       "Drove $5M resource reallocation to high-impact programs. Increased financial transparency across units and established a repeatable reporting cadence for the Board.",
     tools: ["Financial Reporting", "KPI Dashboards", "Excel", "Data Visualization"],
     category: "FP&A",
-    featured: true,
+    featured: false,
   },
 ];
 
